@@ -1,0 +1,827 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.s1 {font: 12.0px 'PingFang SC'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="zh-CN"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;<span class="s1">变化中的中国建筑</span> - <span class="s1">探索游戏</span>&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Microsoft YaHei', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1000px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(to right, #8B0000, #B22222);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>header h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>header p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.9;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.game-area {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 500px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.level-selector {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.level-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #8B0000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.level-btn:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #B22222;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-3px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.level-btn.active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #FFD700;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #8B0000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.game-content {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f9f9f9;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 400px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.game-section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.game-section.active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #8B0000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 2px solid #FFD700;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.matching-game {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.items-container, .descriptions-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.item, .description {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: move;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.item:hover, .description:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-2px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.item.dragging {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.5;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.description.highlight {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #FFF8DC;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px dashed #FFD700;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.detective-game {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.clue {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #FFF8DC;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 5px solid #8B0000;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.options {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #ddd;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f0f0f0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option.correct {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #90EE90;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #32CD32;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option.incorrect {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #FFB6C1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #DC143C;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.writing-game {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>textarea {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 200px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #ddd;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>resize: vertical;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.submit-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #8B0000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-self: flex-end;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.submit-btn:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #B22222;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.feedback {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.feedback.correct {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #90EE90;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #32CD32;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.feedback.incorrect {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #FFB6C1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #DC143C;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.next-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #FFD700;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #8B0000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.fireworks {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: 1000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.firework {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 10px 2px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: explode 1s ease-out forwards;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes explode {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>0% {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>transform: translate(0, 0);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>opacity: 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>100% {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>transform: translate(var(--tx), var(--ty));</p>
+<p class="p1"><span class="Apple-converted-space">                </span>opacity: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.celebration {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: rgba(255, 215, 0, 0.8);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: 999;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.celebration h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #8B0000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.celebration p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #8B0000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.progress-bar {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #eee;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.progress {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(to right, #8B0000, #B22222);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 0%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: width 0.5s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.architectural-elements {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: 1;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.element {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.1;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.element-1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 10%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 5%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 80px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 120px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(45deg, #8B0000, #B22222);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.element-2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>bottom: 15%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>right: 8%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 80px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(45deg, #8B0000, #B22222);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.element-3 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 40%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>right: 15%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 60px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(45deg, #8B0000, #B22222);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50% 50% 0 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1&gt;<span class="s1">变化中的中国建筑</span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;<span class="s1">探索中国建筑的变迁与发展</span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="architectural-elements"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="element element-1"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="element element-2"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="element element-3"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="game-area"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="level-selector"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="level-btn active" data-level="1"&gt;<span class="s1">配对游戏</span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="level-btn" data-level="2"&gt;<span class="s1">侦探破案</span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="level-btn" data-level="3"&gt;<span class="s1">仿写练习</span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="progress-bar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="progress" id="progress"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="game-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- <span class="s1">配对游戏</span> --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="game-section active" id="section-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2&gt;<span class="s1">第一关：建筑特征配对</span>&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;<span class="s1">请将左侧的建筑特征拖动到右侧对应的建筑类型上。</span>&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="matching-game"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="items-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="item" draggable="true" data-id="1"&gt;<span class="s1">天人合一，建筑模仿自然</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="item" draggable="true" data-id="2"&gt;<span class="s1">体现等级观念，注重细节装饰</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="item" draggable="true" data-id="3"&gt;<span class="s1">以</span>"<span class="s1">人类</span>"<span class="s1">、</span>"<span class="s1">梦想</span>"<span class="s1">等价值观为主</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="item" draggable="true" data-id="4"&gt;<span class="s1">将历史与现代结合</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="descriptions-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="description" data-id="1"&gt;<span class="s1">传统中国建筑</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="description" data-id="2"&gt;<span class="s1">传统中国建筑</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="description" data-id="3"&gt;<span class="s1">西方建筑设计师作品</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="description" data-id="4"&gt;<span class="s1">现代中国建筑设计师作品</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="feedback" id="feedback-1"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button class="next-btn" id="next-1"&gt;<span class="s1">下一关</span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- <span class="s1">侦探破案游戏</span> --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="game-section" id="section-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2&gt;<span class="s1">第二关：建筑侦探</span>&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;<span class="s1">根据线索，选择正确的建筑类型。</span>&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="detective-game"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="clue"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h3&gt;<span class="s1">线索一</span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p&gt;<span class="s1">这座建筑的设计灵感来源于自然界的鸟巢，体现了</span>"<span class="s1">生命</span>"<span class="s1">和</span>"<span class="s1">希望</span>"<span class="s1">的价值观。</span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="option" data-correct="false"&gt;<span class="s1">传统中国建筑</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="option" data-correct="true"&gt;<span class="s1">西方建筑设计师作品</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="option" data-correct="false"&gt;<span class="s1">现代中国建筑设计师作品</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="option" data-correct="false"&gt;<span class="s1">以上都不是</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="clue"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h3&gt;<span class="s1">线索二</span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p&gt;<span class="s1">这座建筑中，戗脊上的走兽数量反映了严格的等级观念。</span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="option" data-correct="true"&gt;<span class="s1">传统中国建筑</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="option" data-correct="false"&gt;<span class="s1">西方建筑设计师作品</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="option" data-correct="false"&gt;<span class="s1">现代中国建筑设计师作品</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="option" data-correct="false"&gt;<span class="s1">以上都不是</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="clue"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h3&gt;<span class="s1">线索三</span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p&gt;<span class="s1">这座建筑通过玻璃金字塔将历史与现代完美结合，由贝聿铭设计。</span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="option" data-correct="false"&gt;<span class="s1">传统中国建筑</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="option" data-correct="false"&gt;<span class="s1">西方建筑设计师作品</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="option" data-correct="true"&gt;<span class="s1">现代中国建筑设计师作品</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="option" data-correct="false"&gt;<span class="s1">以上都不是</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="feedback" id="feedback-2"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button class="next-btn" id="next-2"&gt;<span class="s1">下一关</span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- <span class="s1">仿写练习</span> --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="game-section" id="section-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2&gt;<span class="s1">第三关：建筑仿写</span>&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;<span class="s1">请根据所学知识，写一段关于苏州建筑特点的文字（不少于</span>100<span class="s1">字）。</span>&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="writing-game"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;textarea id="writing-area" placeholder="<span class="s1">请在这里输入您的文字</span>..."&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button class="submit-btn" id="submit-writing"&gt;<span class="s1">提交</span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="feedback" id="feedback-3"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button class="next-btn" id="next-3"&gt;<span class="s1">完成游戏</span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- <span class="s1">庆祝效果</span> --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="celebration" id="celebration"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;<span class="s1">恭喜通关！</span>&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;<span class="s1">您已成功完成所有关卡</span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="level-btn" id="restart"&gt;<span class="s1">重新开始</span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- <span class="s1">礼花效果</span> --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="fireworks" id="fireworks"&gt;&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// <span class="s1">游戏状态</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let currentLevel = 1;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let matchedPairs = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let correctAnswers = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let writingSubmitted = false;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// <span class="s1">初始化游戏</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', function() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">关卡切换</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const levelButtons = document.querySelectorAll('.level-btn');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>levelButtons.forEach(button =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>button.addEventListener('click', function() {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const level = this.getAttribute('data-level');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>switchLevel(parseInt(level));</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">配对游戏</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>initMatchingGame();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">侦探游戏</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>initDetectiveGame();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">仿写游戏</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>initWritingGame();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">下一关按钮</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('next-1').addEventListener('click', function() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>switchLevel(2);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('next-2').addEventListener('click', function() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>switchLevel(3);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('next-3').addEventListener('click', function() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>completeGame();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">重新开始按钮</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('restart').addEventListener('click', function() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>resetGame();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// <span class="s1">切换关卡</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function switchLevel(level) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">更新当前关卡</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>currentLevel = level;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">更新进度条</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('progress').style.width = `${(level-1)*33.33}%`;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">更新按钮状态</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.level-btn').forEach(btn =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>btn.classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if(parseInt(btn.getAttribute('data-level')) === level) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>btn.classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">显示对应关卡</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.game-section').forEach(section =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>section.classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById(`section-${level}`).classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// <span class="s1">初始化配对游戏</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function initMatchingGame() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const items = document.querySelectorAll('.item');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const descriptions = document.querySelectorAll('.description');</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">设置拖动事件</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>items.forEach(item =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>item.addEventListener('dragstart', function(e) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>e.dataTransfer.setData('text/plain', this.getAttribute('data-id'));</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.classList.add('dragging');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>item.addEventListener('dragend', function() {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.classList.remove('dragging');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>descriptions.forEach(description =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>description.addEventListener('dragover', function(e) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.classList.add('highlight');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>description.addEventListener('dragleave', function() {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.classList.remove('highlight');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>description.addEventListener('drop', function(e) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.classList.remove('highlight');</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const itemId = e.dataTransfer.getData('text/plain');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const descriptionId = this.getAttribute('data-id');</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if(itemId === descriptionId) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>// <span class="s1">匹配正确</span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>const item = document.querySelector(`.item[data-id="${itemId}"]`);</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>item.style.backgroundColor = '#90EE90';</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>item.style.cursor = 'default';</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>item.draggable = false;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.style.backgroundColor = '#90EE90';</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.style.cursor = 'default';</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>matchedPairs++;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>if(matchedPairs === 4) {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>document.getElementById('feedback-1').textContent = '<span class="s1">恭喜！所有配对都正确！</span>';</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>document.getElementById('feedback-1').classList.add('correct');</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>document.getElementById('next-1').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>createFireworks();</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>// <span class="s1">匹配错误</span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>document.getElementById('feedback-1').textContent = '<span class="s1">配对错误，请再试一次！</span>';</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>document.getElementById('feedback-1').classList.add('incorrect');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>document.getElementById('feedback-1').classList.remove('incorrect');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}, 2000);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// <span class="s1">初始化侦探游戏</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function initDetectiveGame() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const options = document.querySelectorAll('#section-2 .option');</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>options.forEach(option =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>option.addEventListener('click', function() {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// <span class="s1">如果已经回答过，不再处理</span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if(this.classList.contains('correct') || this.classList.contains('incorrect')) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const isCorrect = this.getAttribute('data-correct') === 'true';</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if(isCorrect) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.classList.add('correct');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>correctAnswers++;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.classList.add('incorrect');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>// <span class="s1">显示正确答案</span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>const parent = this.parentElement;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>const correctOption = parent.querySelector('.option[data-correct="true"]');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>correctOption.classList.add('correct');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// <span class="s1">禁用所有选项</span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const allOptions = this.parentElement.querySelectorAll('.option');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>allOptions.forEach(opt =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>opt.style.cursor = 'default';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// <span class="s1">检查是否完成所有题目</span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if(correctAnswers === 3) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>document.getElementById('feedback-2').textContent = '<span class="s1">恭喜！所有问题都回答正确！</span>';</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>document.getElementById('feedback-2').classList.add('correct');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>document.getElementById('next-2').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>createFireworks();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// <span class="s1">初始化仿写游戏</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function initWritingGame() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('submit-writing').addEventListener('click', function() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const text = document.getElementById('writing-area').value;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>if(text.length &lt; 100) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('feedback-3').textContent = '<span class="s1">您的文字不足</span>100<span class="s1">字，请继续补充！</span>';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('feedback-3').classList.add('incorrect');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// <span class="s1">简单验证：检查是否包含关键词</span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const keywords = ['<span class="s1">苏州</span>', '<span class="s1">园林</span>', '<span class="s1">水乡</span>', '<span class="s1">传统</span>', '<span class="s1">现代</span>', '<span class="s1">贝聿铭</span>'];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let foundKeywords = 0;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>keywords.forEach(keyword =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if(text.includes(keyword)) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>foundKeywords++;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>if(foundKeywords &gt;= 2) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('feedback-3').textContent = '<span class="s1">提交成功！您的描述很好地体现了苏州建筑的特点。</span>';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('feedback-3').classList.add('correct');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('next-3').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>writingSubmitted = true;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>createFireworks();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('feedback-3').textContent = '<span class="s1">您的描述可以更多地体现苏州建筑的特色，请再完善一下！</span>';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('feedback-3').classList.add('incorrect');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// <span class="s1">完成游戏</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function completeGame() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('progress').style.width = '100%';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('celebration').style.display = 'flex';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>createFireworks();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// <span class="s1">重置游戏</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function resetGame() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">重置所有状态</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>currentLevel = 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>matchedPairs = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>correctAnswers = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>writingSubmitted = false;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">隐藏庆祝界面</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('celebration').style.display = 'none';</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">重置进度条</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('progress').style.width = '0%';</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">重置所有关卡</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>resetMatchingGame();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>resetDetectiveGame();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>resetWritingGame();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">切换到第一关</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>switchLevel(1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// <span class="s1">重置配对游戏</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function resetMatchingGame() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const items = document.querySelectorAll('.item');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const descriptions = document.querySelectorAll('.description');</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>items.forEach(item =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>item.style.backgroundColor = '';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>item.style.cursor = 'move';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>item.draggable = true;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>descriptions.forEach(description =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>description.style.backgroundColor = '';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>description.style.cursor = 'move';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('feedback-1').classList.remove('correct');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('next-1').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// <span class="s1">重置侦探游戏</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function resetDetectiveGame() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const options = document.querySelectorAll('.option');</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>options.forEach(option =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>option.classList.remove('correct', 'incorrect');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>option.style.cursor = 'pointer';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('feedback-2').classList.remove('correct');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('next-2').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// <span class="s1">重置仿写游戏</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function resetWritingGame() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('writing-area').value = '';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('feedback-3').classList.remove('correct', 'incorrect');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('next-3').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// <span class="s1">创建礼花效果</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function createFireworks() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const fireworksContainer = document.getElementById('fireworks');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>fireworksContainer.style.display = 'block';</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">创建多个礼花</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>for(let i = 0; i &lt; 50; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const firework = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>firework.className = 'firework';</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// <span class="s1">随机颜色</span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const colors = ['#FF0000', '#FFD700', '#00FF00', '#0000FF', '#FF00FF', '#00FFFF'];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const color = colors[Math.floor(Math.random() * colors.length)];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>firework.style.backgroundColor = color;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>firework.style.boxShadow = `0 0 10px 2px ${color}`;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// <span class="s1">随机位置</span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const startX = Math.random() * window.innerWidth;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const startY = Math.random() * window.innerHeight;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>firework.style.left = `${startX}px`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>firework.style.top = `${startY}px`;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// <span class="s1">随机爆炸方向</span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const tx = (Math.random() - 0.5) * 200;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const ty = (Math.random() - 0.5) * 200;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>firework.style.setProperty('--tx', `${tx}px`);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>firework.style.setProperty('--ty', `${ty}px`);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>fireworksContainer.appendChild(firework);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// <span class="s1">移除元素</span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>firework.remove();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}, 1000);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// <span class="s1">隐藏礼花容器</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>fireworksContainer.style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}, 1000);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
